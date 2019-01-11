@@ -1,5 +1,7 @@
 spring:
-    datasource:
+  profiles:
+    active: prod
+  datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       url: jdbc:mysql://localhost:3306/mytest
       username: root
@@ -10,3 +12,16 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml  #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.food.domain  # 注意：对应实体类的路径
+---
+server:
+  port: 8081
+spring:
+  profiles: test
+house: s
+
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
+house: sss

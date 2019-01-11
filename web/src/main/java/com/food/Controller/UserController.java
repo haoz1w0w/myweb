@@ -2,6 +2,7 @@ package com.food.Controller;
 
 
 import com.food.service.user.IUserService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +23,9 @@ public class UserController {
     @Resource
     IUserService userService;
 
+
     @RequestMapping("getAllUser")
     public Object getAllUser() {
-        return userService.list();
+        return userService.getUserName();
     }
 }
