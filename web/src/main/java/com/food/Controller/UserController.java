@@ -26,6 +26,7 @@ public class UserController {
 
     @RequestMapping("getAllUser")
     public Object getAllUser() {
-        return userService.getUserName();
+        String name ="sssssdasdddwwdwedwefwew";
+        return userService.list();
     }
 }
